@@ -1,12 +1,14 @@
-import { AppBar, Toolbar, Typography, InputBase, Badge, Avatar, Icon, Box } from "@mui/material";
+import { AppBar, Toolbar, Typography, InputBase, Badge, Avatar, Icon, Box, Menu, MenuItem} from "@mui/material";
 import  styled  from "@emotion/styled";
 import AllInclusiveSharpIcon from '@mui/icons-material/AllInclusiveSharp';
 import Mail from '@mui/icons-material/Mail'
 import { NotificationAdd } from "@mui/icons-material";
+import { useState } from "react";
 
 
 
 const Navbar= () => {
+  const[click, setClick] = useState(false)
     const StyledToolbar = styled(Toolbar)({
         display:'flex',
       justifyContent:'space-between'
@@ -30,7 +32,11 @@ const Navbar= () => {
       [theme.breakpoints.up("sm")]:
      { display:'none'}
     }))
-   
+    const handleClick =()=>{
+      setClick(!click)
+      console.log()
+   }
+ 
   return (
     <AppBar position='sticky'>
         <StyledToolbar>
@@ -46,13 +52,34 @@ const Navbar= () => {
         <Badge badgeContent={4} color="error" >
             <NotificationAdd color="action"/> 
             </Badge>
-            <Avatar alt="Nikemy Sharp" src="/static/images/avatar/1.jpg" />
+            <Avatar alt="Nikemy Sharp" src="/static/images/avatar/1.jpg"  onClick={handleClick}/>
         </Icon>
         <UserBox>
-        <Avatar alt="Nikemy Sharp" src="/static/images/avatar/1.jpg" />
+        <Avatar alt="Nikemy Sharp" src="/static/images/avatar/1.jpg" 
+        onClick={handleClick}
+        />
         <Typography>Nikita</Typography>
         </UserBox>
         </StyledToolbar>
+       {click ?  <Menu
+        id="demo-positioned-menu"
+        aria-labelledby="demo-positioned-button"
+          open={ click }
+          onClose={() => setClick(!click)}
+       
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right',
+        }}
+      >
+        <MenuItem >Profile</MenuItem>
+        <MenuItem >My account</MenuItem>
+        <MenuItem >Logout</MenuItem>
+      </Menu> : false}
     </AppBar>
   )
 }

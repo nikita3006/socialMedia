@@ -66,7 +66,7 @@ const RightBar = () => {
     },
   ];
   return (
-    <Box  flex={2} p={2} sx={{ display:{ xs : 'none', sm:'block'}}}>
+    <Box  flex={3} p={2} sx={{ display:{ xs : 'none', sm:'block'}}}>
       <Box position='fixed'>
         <Typography variant="h6" fontWeight={300}>
           Online Friend
@@ -84,7 +84,7 @@ const RightBar = () => {
           <Avatar alt="Trevor Henderson" src="/static/images/avatar/5.jpg" />
         </AvatarGroup>
 
-        <ImageList sx={{ width: 350, height: 100 }}>
+        <ImageList sx={{ width: 440, height: 120 }}>
       {itemData.map((item) => (
         <ImageListItem key={item.img}>
           <img
@@ -101,7 +101,7 @@ const RightBar = () => {
     <List sx={{ width: '100%', maxWidth: 360, }}>
       <ListItem alignItems="flex-start">
         <ListItemAvatar >
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" sx={{backgroundColor:'black', color:'white'}} />
+          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" sx={{backgroundColor:'gray', color:'white'}} />
         </ListItemAvatar>
         <ListItemText
           primary="Brunch this weekend?"
@@ -111,7 +111,7 @@ const RightBar = () => {
                 sx={{ display: 'inline' }}
                 component="span"
                 variant="body2"
-                color="black"
+                
               >
                 Ali Connors
               </Typography>
@@ -123,7 +123,7 @@ const RightBar = () => {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" sx={{backgroundColor:'black', color:'white'}}/>
+          <Avatar alt="Travis Howard" src="/static/images/avatar/2.jpg" sx={{backgroundColor:'gray', color:'white'}}/>
         </ListItemAvatar>
         <ListItemText
           primary="Summer BBQ"
@@ -133,7 +133,7 @@ const RightBar = () => {
                 sx={{ display: 'inline' }}
                 component="span"
                 variant="body2"
-                color="black"
+               
               >
                 to Scott, Alex, Jennifer
               </Typography>
@@ -145,7 +145,7 @@ const RightBar = () => {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" sx={{backgroundColor:'black', color:'white'}}/>
+          <Avatar alt="Cindy Baker" src="/static/images/avatar/3.jpg" sx={{backgroundColor:'gray', color:'white'}}/>
         </ListItemAvatar>
         <ListItemText
           primary="Oui Oui"
@@ -155,7 +155,7 @@ const RightBar = () => {
                 sx={{ display: 'inline' }}
                 component="span"
                 variant="body2"
-                color="black"
+              
               >
                 Sandra Adams
               </Typography>

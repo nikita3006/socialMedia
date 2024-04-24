@@ -57,7 +57,7 @@ const Add = () => {
           >
               <Box >
                  <Box sx={{ mt: 2, }}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2" sx={{textAlign:'center'}}  >
+                    <Typography id="modal-modal-title" variant="h6" component="h2" sx={{textAlign:'center'}} bgcolor={"background.default"} color={"text.primary"} >
                         Create a Post
                       </Typography>
                  </Box>

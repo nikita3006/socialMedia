@@ -10,7 +10,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import Brightness5Icon from '@mui/icons-material/Brightness5';
 
-const SideBar = () => {
+const SideBar = ({mode, setMode}) => {
   const[click, setClick] =useState(false)
 
   const handleClick = () =>{
@@ -81,7 +81,7 @@ const SideBar = () => {
               <ListItemIcon onClick={handleClick}>
                {click ?  <DarkModeIcon /> :  <Brightness5Icon/>}
               </ListItemIcon>
-              <Switch  defaultChecked />
+              <Switch  onChange={e=>setMode(mode === 'light' ? 'dark' :'light')} />
             </ListItemButton>
           </ListItem>
         </List>
